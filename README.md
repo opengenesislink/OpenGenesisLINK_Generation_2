@@ -17,7 +17,7 @@ A persistent, user-created virtual world with avatars, land, building, scripting
 - Each grid retains control of accounts, assets, land, content and policies.
 
 ## Build the first prototype
-- [.NET 10 solution and build instructions](BUILD.md): separate GridFabric HTTPS process, simulator INI loader and region registration/heartbeat over HTTPS. These are early, non-production proof-of-concept components.
+- [Linux build script](compile.sh) / [Windows PowerShell build script](compile.ps1) and [.NET 10 solution and build instructions](BUILD.md): separate GridFabric HTTPS process, simulator INI loader and region registration/heartbeat over HTTPS. These are early, non-production proof-of-concept components.
 - [Solution file](OpenGenesisLINK.Generation2.sln), [GridFabric source](src/OGL.Gen2.GridFabric/Program.cs), [Simulator source](src/OGL.Gen2.Simulator/Program.cs) and [shared protocol contracts](src/OGL.Gen2.Contracts/RegionContracts.cs).
 
 ## Documentation

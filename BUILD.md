@@ -10,7 +10,9 @@
 
 ## Compile
 
-From the repository root:
+On Linux, from the repository root run `./compile.sh`; on Windows PowerShell run `./compile.ps1`. Both scripts build all projects, execute the smoke test and publish two separate applications into `publish/`.
+
+Alternatively, execute the commands directly:
 
 ```sh
 dotnet restore OpenGenesisLINK.Generation2.sln

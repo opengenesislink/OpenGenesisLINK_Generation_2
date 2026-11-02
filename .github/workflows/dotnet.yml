@@ -7,6 +7,8 @@ on:
       - "tests/**"
       - "Directory.Build.props"
       - "global.json"
+      - "compile.sh"
+      - "compile.ps1"
       - "OpenGenesisLINK.Generation2.sln"
       - "examples/simulator/**"
       - ".github/workflows/dotnet.yml"
