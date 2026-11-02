@@ -1,6 +1,6 @@
 # OpenGenesisLINK Generation 2
 
-Next-generation federated virtual-world platform. **Architecture and planning stage — no server implementation is published here.**
+Next-generation federated virtual-world platform. **Early public .NET 10 bootstrap prototype is available; no native scene simulation, stable release, or proprietary core is published here.**
 
 ## Vision
 A persistent, user-created virtual world with avatars, land, building, scripting, inventory, social systems, economy and independent grids. OGL Gen2 uses a new native server core; OpenSimulator/Firestorm compatibility is provided only through optional isolated gateways.
@@ -15,6 +15,10 @@ A persistent, user-created virtual world with avatars, land, building, scripting
 - Viewer: native OGL Viewer later; Firestorm compatibility via a separately developed legacy gateway.
 - Licensing direction: free-of-charge proprietary binary distribution, closed server source, third-party add-ons through documented SDK. **No finalized EULA has been issued.**
 - Each grid retains control of accounts, assets, land, content and policies.
+
+## Build the first prototype
+- [.NET 10 solution and build instructions](BUILD.md): separate GridFabric HTTPS process, simulator INI loader and region registration/heartbeat over HTTPS. These are early, non-production proof-of-concept components.
+- [Solution file](OpenGenesisLINK.Generation2.sln), [GridFabric source](src/OGL.Gen2.GridFabric/Program.cs), [Simulator source](src/OGL.Gen2.Simulator/Program.cs) and [shared protocol contracts](src/OGL.Gen2.Contracts/RegionContracts.cs).
 
 ## Documentation
 - [Architecture overview](docs/architecture/OVERVIEW.md)
@@ -35,6 +39,6 @@ A persistent, user-created virtual world with avatars, land, building, scripting
 - [Roadmap](ROADMAP.md)
 
 ## Status
-Architecture specifications are **proposals**, not implemented features. Performance targets require measurement; interoperability requires prototype testing. No source code, binaries or working protocol endpoints are claimed.
+Architecture specifications remain **proposals**. A public **buildable control-plane prototype** supports local INI parsing, a TLS listener, in-memory region registration and heartbeat; it is not a functioning world simulator and is not production secure or horizontally scalable. Performance targets and interoperability require independent testing.
 
 Copyright © 2026 OpenGenesisLINK contributors / respective rights holders. All rights reserved. No permission to copy, modify or redistribute proprietary software is granted by this README. Third-party licenses remain applicable.

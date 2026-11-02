@@ -17,9 +17,11 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 
 ## Phase 1 — Prototype contracts
 - [ ] Specify canonical identifiers, protocol versioning, schemas and error handling.
-- [ ] Prototype GridFabric TLS listener with configurable port and securely sourced certificates.
-- [ ] Implement simulator-side INI loader and validation for Simulator.ini, GridFabric.ini and Regions/*.ini.
-- [ ] Implement simulator-to-GridFabric TLS authentication, region registration, leases, fencing and reconnection.
+- [x] Add initial buildable GridFabric HTTPS/Kestrel listener prototype with configurable endpoint and external certificate configuration (not yet production validated).
+- [ ] Validate production-grade TLS provisioning, certificate rotation and operational fail-closed behavior.
+- [x] Add initial simulator-side INI loader and validation for Simulator.ini, GridFabric.ini and Regions/*.ini.
+- [x] Prototype simulator-to-GridFabric TLS bearer authentication, in-memory region registration, leases and heartbeat retries (single instance only).
+- [ ] Implement per-simulator identity, durable distributed leases/fencing, exponential backoff and complete reconnection tests.
 - [ ] Define GridFabric service ownership, routing, partitions, failure modes and authentication contracts.
 - [ ] Build representative login/inventory/presence load scenarios and distributed observability.
 - [ ] Prototype the Global Atlas registry and its allocation/conflict rules.

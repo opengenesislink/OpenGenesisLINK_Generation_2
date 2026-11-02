@@ -1,6 +1,6 @@
 # OGL Simulator — separate executable with GridFabric connectivity
 
-**Status:** Generation 2 design specification, **not an implemented binary or operating configuration**. This design intentionally follows the **operational separation** familiar from OpenSimulator (separate ROBUST and region simulator processes) without adopting OpenSimulator's simulation implementation or promising its exact wire compatibility.
+**Status:** design specification with a **buildable early control-plane prototype** (INI loading, HTTPS register/heartbeat). This is not an actual 3D region simulation server. This design intentionally follows the **operational separation** familiar from OpenSimulator (separate ROBUST and region simulator processes) without adopting OpenSimulator's simulation implementation or promising its exact wire compatibility.
 
 ## Runtime and deployment
 
@@ -9,7 +9,7 @@ Two independently startable application roles are proposed:
 - **OGL GridFabric** (working name): independent grid-services application or replicated cluster, providing identity, sessions, region directory, inventory/asset metadata, presence, economy, federation, operations, and the public TLS edge (default **TCP 8002**, configurable).
 - **OGL Simulator**: separate .NET 10 executable/service that owns one or multiple configured regions, scene state, physics, scripts, movement, connected avatars and region-local communication.
 
-Provisional executable names: `OGL.GridFabric` and `OGL.Simulator`. Names are proposals, not shipped artifacts. Each may run on Linux or Windows, on the same host or across independent machines. A simulator process can be restarted or upgraded without restarting GridFabric or other simulator processes. A process failure affects its own assigned regions; operators may prefer one region per process for better fault isolation.
+Initial executable/project names: `OGL.Gen2.GridFabric` and `OGL.Gen2.Simulator`. Product/branding names remain provisional; no release artifacts have been shipped. Each may run on Linux or Windows, on the same host or across independent machines. A simulator process can be restarted or upgraded without restarting GridFabric or other simulator processes. A process failure affects its own assigned regions; operators may prefer one region per process for better fault isolation.
 
 ```text
                          Native Viewer / World API
@@ -54,7 +54,7 @@ OGL-Simulator/
       Gummybear-Island.ini
 ```
 
-Example templates: [Simulator.ini](../../examples/simulator/config/Simulator.ini), [GridFabric.ini](../../examples/simulator/config/GridFabric.ini), [Magdeburg region](../../examples/simulator/config/Regions/Magdeburg.ini) and [Gummybear region](../../examples/simulator/config/Regions/Gummybear-Island.ini).
+Early prototype [build instructions](../../BUILD.md). Example templates: [Simulator.ini](../../examples/simulator/config/Simulator.ini), [GridFabric.ini](../../examples/simulator/config/GridFabric.ini), [Magdeburg region](../../examples/simulator/config/Regions/Magdeburg.ini) and [Gummybear region](../../examples/simulator/config/Regions/Gummybear-Island.ini).
 
 The final configuration loader should support a primary config path, an explicit include directory, environment/secret-manager overrides, schema validation, safe defaults, change audit and actionable startup errors.
 

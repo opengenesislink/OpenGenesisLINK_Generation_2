@@ -1,7 +1,7 @@
 # ADR 0002 — Standalone simulator executable with independent INI files
 
 - **Date:** 2026-11-02
-- **Status:** proposed architecture; executable contracts not yet implemented
+- **Status:** architectural decision with an experimental .NET 10 simulator/registry control-plane bootstrap; physics and scene engine not implemented
 - **Context:** Generation 2 should retain OpenSimulator's convenient operator model: a central ROBUST-like process and separately launched simulator processes with independent configuration. However, Gen2 replaces ROBUST with the distributed GridFabric design and does not inherit OpenSimulator's internal core.
 
 ## Decision
@@ -20,4 +20,4 @@ Needs a configuration loader/schema, simulator identity management, mutual authe
 
 ## Acceptance
 
-See [simulator registration and failure modes](../architecture/SIMULATOR_GRIDFABRIC_SPEC.md). The INIs in `examples/simulator/` are templates only; no executable has been released.
+See [simulator registration and failure modes](../architecture/SIMULATOR_GRIDFABRIC_SPEC.md). The INIs in `examples/simulator/` are usable with the bootstrap after operator configuration; no production simulator release exists.

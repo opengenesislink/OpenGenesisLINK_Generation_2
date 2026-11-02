@@ -1,6 +1,6 @@
 # OGL GridFabric — distributed grid services
 
-**Status:** architecture proposal, not implemented. **Name:** OGL GridFabric is a working name, subject to product and trademark review.
+**Status:** architecture proposal. A single-node .NET 10 HTTPS/region-lease prototype exists; the distributed system described below is not implemented. **Name:** OGL GridFabric is a working name, subject to product and trademark review.
 
 ## Mission and non-goals
 

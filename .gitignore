@@ -9,6 +9,7 @@
 
 # .NET build artifacts (future private implementation workspaces)
 **/bin/
+publish/
 **/obj/
 **/TestResults/
 *.nupkg
