@@ -7,6 +7,7 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 - [x] Initial architecture, federation and legal decision documents added.
 - [x] Documentation link validation in CI.
 - [x] Draft GridFabric architecture, configurable HTTPS/TLS :8002 and capacity qualification plan.
+- [x] Specify separate OGL Simulator process, independent INI files and GridFabric registration/reconnect contract (design only).
 - [ ] Approve GridFabric product name, architecture ADR and 500k-session goal.
 - [ ] Confirm governing proprietary license/EULA and contributor terms with the rights holders.
 - [ ] Record architecture decisions using ADRs and agree on measurable acceptance criteria.
@@ -17,6 +18,8 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 ## Phase 1 — Prototype contracts
 - [ ] Specify canonical identifiers, protocol versioning, schemas and error handling.
 - [ ] Prototype GridFabric TLS listener with configurable port and securely sourced certificates.
+- [ ] Implement simulator-side INI loader and validation for Simulator.ini, GridFabric.ini and Regions/*.ini.
+- [ ] Implement simulator-to-GridFabric TLS authentication, region registration, leases, fencing and reconnection.
 - [ ] Define GridFabric service ownership, routing, partitions, failure modes and authentication contracts.
 - [ ] Build representative login/inventory/presence load scenarios and distributed observability.
 - [ ] Prototype the Global Atlas registry and its allocation/conflict rules.
@@ -30,6 +33,7 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 - [ ] Build an independent C#/.NET 10 simulation core in an appropriately licensed private codebase.
 - [ ] Implement durable grid/account/region state with supported database adapters.
 - [ ] Implement region scheduling, movement, scene graph and asset/inventory interfaces.
+- [ ] Run two independent OGL Simulator processes attached to one GridFabric and test multi-region process hosting and isolation.
 - [ ] Establish script sandbox, capability permissions and resource limits.
 - [ ] Validate recovery, durability, latency, memory and multi-region load.
 

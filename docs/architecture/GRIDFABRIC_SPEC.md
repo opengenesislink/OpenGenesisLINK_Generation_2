@@ -4,7 +4,7 @@
 
 ## Mission and non-goals
 
-GridFabric is Generation 2's replacement for the logical *grid service* responsibilities historically consolidated in OpenSimulator's ROBUST. It is **not** a larger ROBUST process, and is **not** the per-region scene simulation engine.
+GridFabric is Generation 2's replacement for the logical *grid service* responsibilities historically consolidated in OpenSimulator's ROBUST. It is **not** a larger ROBUST process, and is **not** the per-region scene simulation engine. As with the familiar OpenSimulator deployment model, Gen2 uses **separately started simulator applications with their own INIs**, connecting securely to GridFabric. See the [simulator process/connection specification](SIMULATOR_GRIDFABRIC_SPEC.md).
 
 A small grid should be operable with one modest deployment, while a large grid can deploy independently replicated and partitioned components. The topology, not an oversized single executable, supplies capacity.
 
@@ -122,6 +122,7 @@ The default direct public endpoint is **`https://<grid-hostname>:8002`**, with a
 
 - [Global Atlas](GLOBAL_ATLAS_SPEC.md) and [federation travel](HYPERGRID_2_PROTOCOL.md) remain separate trust domains.
 - [Native architecture](OVERVIEW.md) defines the region/scene boundary.
+- [Independent simulator process and INIs](SIMULATOR_GRIDFABRIC_SPEC.md) defines region registration, TLS connectivity, leases and safe reconnection.
 - [Capacity validation](GRIDFABRIC_CAPACITY_VALIDATION.md) defines evidence needed before claiming 500k capacity.
 - [Licensing](../legal/LICENSING_STRATEGY.md): no private source is published through this proposal.
 

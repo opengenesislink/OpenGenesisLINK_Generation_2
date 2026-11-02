@@ -13,7 +13,8 @@
 ## Logical components
 | Component | Responsibility | Authority |
 | --- | --- | --- |
-| Native simulation core | scene state, physics integration, region ticking, object lifecycle | owning grid |
+| OGL Simulator executable(s) | independently launched region host(s) with separate INI files, one or more regions per process; TLS registration to GridFabric | owning grid |
+| Native simulation core | scene state, physics integration, region ticking, object lifecycle (inside the simulator) | owning grid |
 | OGL GridFabric | distributed gateway and grid service coordination (proposed replacement for ROBUST-like services) | owning grid |
 | Identity and session service | account login, session lifecycle, capabilities | owning grid |
 | Inventory and asset services | metadata, immutable assets, authorization and references | owning grid |
@@ -40,4 +41,4 @@ Target platforms: Linux x86_64, Linux ARM64, and Windows x86_64. Windows ARM64 i
 ## Contract work still required
 Canonical identifiers, scene/event formats, asset formats, coordinate units, persistence schema, API version rules, synchronization and consistency guarantees, privacy retention, and explicit migration policy.
 
-Related specifications: [GridFabric](GRIDFABRIC_SPEC.md), [GridFabric TLS](GRIDFABRIC_TLS_CONFIGURATION.md), [GridFabric capacity](GRIDFABRIC_CAPACITY_VALIDATION.md), [Atlas](GLOBAL_ATLAS_SPEC.md), [registry](GRID_REGISTRY_SPEC.md), [travel](HYPERGRID_2_PROTOCOL.md), [crossing](SEAMLESS_CROSSING_SPEC.md), [legacy](LEGACY_VIEWER_GATEWAY.md).
+Related specifications: [Simulator / GridFabric connection](SIMULATOR_GRIDFABRIC_SPEC.md), [GridFabric](GRIDFABRIC_SPEC.md), [GridFabric TLS](GRIDFABRIC_TLS_CONFIGURATION.md), [GridFabric capacity](GRIDFABRIC_CAPACITY_VALIDATION.md), [Atlas](GLOBAL_ATLAS_SPEC.md), [registry](GRID_REGISTRY_SPEC.md), [travel](HYPERGRID_2_PROTOCOL.md), [crossing](SEAMLESS_CROSSING_SPEC.md), [legacy](LEGACY_VIEWER_GATEWAY.md).
