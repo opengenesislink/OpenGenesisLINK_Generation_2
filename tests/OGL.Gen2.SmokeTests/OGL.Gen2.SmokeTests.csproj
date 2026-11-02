@@ -1,0 +1,9 @@
+<Project Sdk="Microsoft.NET.Sdk">
+  <PropertyGroup>
+    <OutputType>Exe</OutputType>
+  </PropertyGroup>
+  <ItemGroup>
+    <ProjectReference Include="../../src/OGL.Gen2.Simulator/OGL.Gen2.Simulator.csproj" />
+    <ProjectReference Include="../../src/OGL.Gen2.Contracts/OGL.Gen2.Contracts.csproj" />
+  </ItemGroup>
+</Project>

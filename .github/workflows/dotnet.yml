@@ -1,0 +1,37 @@
+name: .NET 10 build
+
+on:
+  push:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "Directory.Build.props"
+      - "global.json"
+      - "OpenGenesisLINK.Generation2.sln"
+      - "examples/simulator/**"
+      - ".github/workflows/dotnet.yml"
+  pull_request:
+    paths:
+      - "src/**"
+      - "tests/**"
+      - "Directory.Build.props"
+      - "global.json"
+      - "OpenGenesisLINK.Generation2.sln"
+      - "examples/simulator/**"
+      - ".github/workflows/dotnet.yml"
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '10.0.x'
+      - name: Build complete solution
+        run: dotnet build OpenGenesisLINK.Generation2.sln -c Release
+      - name: Run no-dependency smoke tests
+        run: dotnet run --project tests/OGL.Gen2.SmokeTests -c Release --no-build

@@ -1,0 +1,36 @@
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.0.31903.59
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGL.Gen2.Contracts", "src\OGL.Gen2.Contracts\OGL.Gen2.Contracts.csproj", "{3CFE73C4-07B5-4B61-82B2-53548E217300}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGL.Gen2.GridFabric", "src\OGL.Gen2.GridFabric\OGL.Gen2.GridFabric.csproj", "{3CFE73C4-07B5-4B61-82B2-53548E217301}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGL.Gen2.Simulator", "src\OGL.Gen2.Simulator\OGL.Gen2.Simulator.csproj", "{3CFE73C4-07B5-4B61-82B2-53548E217302}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "OGL.Gen2.SmokeTests", "tests\OGL.Gen2.SmokeTests\OGL.Gen2.SmokeTests.csproj", "{3CFE73C4-07B5-4B61-82B2-53548E217303}"
+EndProject
+Global
+  GlobalSection(SolutionConfigurationPlatforms) = preSolution
+    Debug|Any CPU = Debug|Any CPU
+    Release|Any CPU = Release|Any CPU
+  EndGlobalSection
+  GlobalSection(ProjectConfigurationPlatforms) = postSolution
+    {3CFE73C4-07B5-4B61-82B2-53548E217300}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217300}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217300}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217300}.Release|Any CPU.Build.0 = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217301}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217301}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217301}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217301}.Release|Any CPU.Build.0 = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217302}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217302}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217302}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217302}.Release|Any CPU.Build.0 = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217303}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217303}.Debug|Any CPU.Build.0 = Debug|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217303}.Release|Any CPU.ActiveCfg = Release|Any CPU
+    {3CFE73C4-07B5-4B61-82B2-53548E217303}.Release|Any CPU.Build.0 = Release|Any CPU
+  EndGlobalSection
+EndGlobal

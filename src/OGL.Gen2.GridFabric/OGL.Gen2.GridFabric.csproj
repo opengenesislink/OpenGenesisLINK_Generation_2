@@ -1,0 +1,5 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+  <ItemGroup>
+    <ProjectReference Include="../OGL.Gen2.Contracts/OGL.Gen2.Contracts.csproj" />
+  </ItemGroup>
+</Project>
