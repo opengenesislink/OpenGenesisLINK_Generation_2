@@ -1,0 +1,33 @@
+# IDE / editor
+.vs/
+.vscode/
+.idea/
+*.suo
+*.user
+*.userosscache
+*.sln.docstates
+
+# .NET build artifacts (future private implementation workspaces)
+**/bin/
+**/obj/
+**/TestResults/
+*.nupkg
+*.snupkg
+coverage/
+*.coverage
+*.coveragexml
+
+# Local artifacts, secrets, environment and caches
+.env
+.env.*
+!.env.example
+*.pfx
+*.p12
+*.key
+*.pem
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
+__pycache__/
+*.pyc
