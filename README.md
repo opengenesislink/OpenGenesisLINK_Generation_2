@@ -7,6 +7,7 @@ A persistent, user-created virtual world with avatars, land, building, scripting
 
 ## Decisions
 - Native server: C# / .NET 10 (target); Linux x86_64/ARM64 and Windows x86_64.
+- Grid services: proposed **OGL GridFabric** (working name), a horizontally scalable replacement for ROBUST-style grid services, with configurable direct HTTPS/TLS (default TCP 8002) and a 500,000-concurrent-session **stretch design goal**, not proven throughput.
 - Federation: Hypergrid 2.0 with centrally coordinated, globally positioned grid territories.
 - Global Atlas: one shared coordinate space, multiple freely placed territories per grid.
 - Travel: atlas-based teleportation; optional bilateral seamless crossing for adjacent compatible territories.
@@ -16,6 +17,10 @@ A persistent, user-created virtual world with avatars, land, building, scripting
 
 ## Documentation
 - [Architecture overview](docs/architecture/OVERVIEW.md)
+- [GridFabric design](docs/architecture/GRIDFABRIC_SPEC.md)
+- [GridFabric TLS and port configuration](docs/architecture/GRIDFABRIC_TLS_CONFIGURATION.md)
+- [GridFabric capacity and load-testing plan](docs/architecture/GRIDFABRIC_CAPACITY_VALIDATION.md)
+- [ADR 0001 — distributed grid services](docs/adr/0001-gridfabric-distributed-grid-services.md)
 - [Global Atlas and territories](docs/architecture/GLOBAL_ATLAS_SPEC.md)
 - [Grid registration](docs/architecture/GRID_REGISTRY_SPEC.md)
 - [Hypergrid 2.0 travel](docs/architecture/HYPERGRID_2_PROTOCOL.md)

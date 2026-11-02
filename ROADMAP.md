@@ -6,6 +6,8 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 - [x] Repository initialized with architecture index.
 - [x] Initial architecture, federation and legal decision documents added.
 - [x] Documentation link validation in CI.
+- [x] Draft GridFabric architecture, configurable HTTPS/TLS :8002 and capacity qualification plan.
+- [ ] Approve GridFabric product name, architecture ADR and 500k-session goal.
 - [ ] Confirm governing proprietary license/EULA and contributor terms with the rights holders.
 - [ ] Record architecture decisions using ADRs and agree on measurable acceptance criteria.
 - [ ] Define the separation between public specifications/SDK and private server implementation.
@@ -14,6 +16,9 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 
 ## Phase 1 — Prototype contracts
 - [ ] Specify canonical identifiers, protocol versioning, schemas and error handling.
+- [ ] Prototype GridFabric TLS listener with configurable port and securely sourced certificates.
+- [ ] Define GridFabric service ownership, routing, partitions, failure modes and authentication contracts.
+- [ ] Build representative login/inventory/presence load scenarios and distributed observability.
 - [ ] Prototype the Global Atlas registry and its allocation/conflict rules.
 - [ ] Model grid authentication, key rotation, signed discovery and trust boundaries.
 - [ ] Define contracts for world state, identity, assets, inventory and scene events.
@@ -49,6 +54,7 @@ Status: planning baseline, not a release commitment. Phases are ordered by techn
 ## Phase 5 — Operations and release
 - [ ] Package, deploy, observe, back up and restore services.
 - [ ] Conduct security review, incident exercises, upgrade/rollback tests and capacity testing.
+- [ ] Validate GridFabric at 10k, 50k, 100k and stretch 500k concurrent sessions with realistic operations, secure TLS edge and node-failure recovery.
 - [ ] Finalize EULA, notices, distribution terms and third-party license compliance.
 - [ ] Publish release artifacts only after all release gates have been met.
 
